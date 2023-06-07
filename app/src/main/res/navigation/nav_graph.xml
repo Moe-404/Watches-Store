@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginRegisterFragment2">
+
+    <fragment
+        android:id="@+id/loginRegisterFragment2"
+        android:name="com.mohamed.watchesstore.fragments.LoginRegisterFragment"
+        android:label="fragment_login_register_"
+        tools:layout="@layout/fragment_login_register_">
+        <action
+            android:id="@+id/action_loginRegisterFragment2_to_welcomeScreenFragment2"
+            app:destination="@id/welcomeScreenFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreenFragment2"
+        android:name="com.mohamed.watchesstore.fragments.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen_"
+        tools:layout="@layout/fragment_welcome_screen_">
+        <action
+            android:id="@+id/action_welcomeScreenFragment2_to_instructionsFragment2"
+            app:destination="@id/instructionsFragment2"
+            app:popUpTo="@id/welcomeScreenFragment2"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment2"
+        android:name="com.mohamed.watchesstore.fragments.InstructionsFragment"
+        android:label="fragment_instructions_"
+        tools:layout="@layout/fragment_instructions_">
+        <action
+            android:id="@+id/action_instructionsFragment2_to_watchesListFragment2"
+            app:destination="@id/watchesListFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchesListFragment2"
+        android:name="com.mohamed.watchesstore.fragments.WatchesListFragment"
+        android:label="WatchesListFragment">
+        <action
+            android:id="@+id/action_watchesListFragment2_to_addItemFragment2"
+            app:destination="@id/addItemFragment2" />
+        <action
+            android:id="@+id/action_watchesListFragment2_to_loginRegisterFragment2"
+            app:destination="@id/loginRegisterFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment2"
+        android:name="com.mohamed.watchesstore.fragments.AddItemFragment"
+        android:label="AddItemFragment">
+        <action
+            android:id="@+id/action_addItemFragment2_to_watchesListFragment2"
+            app:destination="@id/watchesListFragment2" />
+    </fragment>
+</navigation>
