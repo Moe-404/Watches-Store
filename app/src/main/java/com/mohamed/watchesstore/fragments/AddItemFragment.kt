@@ -19,18 +19,18 @@ class AddItemFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddItemBinding.inflate(inflater, container, false)
 
         binding.details = Watch()
 
         viewModelData = ViewModelProvider(requireActivity())[WatchesViewModel::class.java]
 
-        binding.save.setOnClickListener { view: View ->
+        binding.save.setOnClickListener {
             saveDetails()
         }
 
-        binding.cancel.setOnClickListener { view: View ->
+        binding.cancel.setOnClickListener {
             findNavController().navigateUp()
         }
 

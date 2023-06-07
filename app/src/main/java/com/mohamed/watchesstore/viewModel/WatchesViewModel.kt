@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.mohamed.watchesstore.model.Watch
 
 class WatchesViewModel: ViewModel() {
-    private lateinit var watchList: MutableList<Watch>
     private var watchesList = mutableListOf<Watch>()
 
     private var _watches = MutableLiveData<List<Watch>>()

@@ -14,7 +14,7 @@ class WelcomeScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentWelcomeScreenBinding.inflate(inflater, container, false)
         binding.next.setOnClickListener{ view: View ->
             view.findNavController().navigate(

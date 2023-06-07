@@ -12,6 +12,7 @@ import com.example.watchesstore.databinding.WatchesBinding
 import com.mohamed.watchesstore.model.Watch
 import com.mohamed.watchesstore.viewModel.WatchesViewModel
 
+@Suppress("DEPRECATION")
 class WatchesListFragment : Fragment() {
     private lateinit var binding: FragmentWatchesListBinding
     override fun onCreateView(

@@ -10,11 +10,10 @@ import com.example.watchesstore.R
 import com.example.watchesstore.databinding.FragmentLoginRegisterBinding
 
 class LoginRegisterFragment : Fragment() {
-    private lateinit var binding:FragmentLoginRegisterBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val binding = FragmentLoginRegisterBinding.inflate(inflater,container,false)
         binding.login.setOnClickListener{view:View ->
